@@ -3,10 +3,12 @@
 
     <application>
         <activity android:name=".view.ProductActivity"
-            android:label="@string/filter">
+            android:label="@string/filter"
+            android:theme="@style/AppTheme">
         </activity>
         <activity android:name=".view.FilterActivity"
-            android:label="@string/filter"/>
+            android:label="@string/filter"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".view.FilterCaseActivity"
             android:label="@string/filter"/>
     </application>

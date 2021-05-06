@@ -28,5 +28,4 @@ object Solution {
         }
         return result
     }
-  }
 }

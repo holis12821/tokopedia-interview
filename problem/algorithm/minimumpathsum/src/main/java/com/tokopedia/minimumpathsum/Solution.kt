@@ -31,5 +31,4 @@ object Solution {
 
         return matrix[si][sj] + Math.min(op1, op2)
     }
-
 }

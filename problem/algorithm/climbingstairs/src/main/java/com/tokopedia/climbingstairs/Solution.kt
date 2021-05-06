@@ -12,6 +12,4 @@ object Solution {
             else -> -1
         }
     }
-
-  }
 }
