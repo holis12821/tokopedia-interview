@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface ProductService {
-    @GET("api/json/get/VJk2VEhv5")
+    @GET("api/json/get/EkROGxTwq")
     fun getDataProduct(): Call<ResponseServer>
 }

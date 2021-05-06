@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tokopedia.filter">
-
     <application>
         <activity
             android:name=".view.FilterActivity"
             android:label="@string/filter"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.ProductActivity"
+            android:name=".view.view.ProductActivity"
             android:label="@string/filter"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.FilterCaseActivity"
+            android:name=".view.view.FilterCaseActivity"
             android:label="@string/filter" />
     </application>
 
