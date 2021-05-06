@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="filter">Filter</string>
+    <string name="filter_product">Filter 1</string>
+    <string name="setContentDescription_FAB">FAB</string>
 </resources>

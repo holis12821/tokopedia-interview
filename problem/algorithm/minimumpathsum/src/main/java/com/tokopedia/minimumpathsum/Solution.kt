@@ -1,6 +1,5 @@
 package com.tokopedia.minimumpathsum
 
-import java.util.ArrayList
 
 object Solution {
     fun minimumPathSum(matrix: Array<IntArray>): Int {
