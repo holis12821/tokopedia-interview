@@ -3,4 +3,12 @@
     <string name="filter">Filter</string>
     <string name="filter_product">Filter 1</string>
     <string name="setContentDescription_FAB">FAB</string>
+    <string name="setContentDescriptionImageView">imageView</string>
+
+    <string name="name_product">Celana Jeans Pria Model Classic Import Luar Negri</string>
+    <string name="price">Rp. 150.000</string>
+    <string name="address">Jakarta</string>
+    <string name="rating">rating</string>
+
+    <string name="store">Tokopedia</string>
 </resources>

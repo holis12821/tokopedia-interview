@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/layout_marginTopCardView"
+    android:layout_marginStart="@dimen/layout_marginLeftCardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTopCardView"
+        android:layout_marginBottom="@dimen/layout_marginBottom_CardView"
+        android:layout_margin="@dimen/layout_margin_cardView"
+        app:cardCornerRadius="@dimen/card_cornerRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_product"
+                android:adjustViewBounds="true"
+                android:layout_width="@dimen/layout_width_CardView_Image"
+                android:layout_height="@dimen/layout_height_CardView_Image"
+                android:layout_marginStart="@dimen/layout_marginLeftImageView"
+                android:layout_marginEnd="@dimen/layout_marginRight_imageView"
+                android:layout_marginTop="@dimen/layout_marginTopImageView"
+                android:layout_marginBottom="@dimen/layout_marginBottomImageView"
+                android:contentDescription="@string/filter_product"
+                android:src="@drawable/images_3"
+                />
+
+            <LinearLayout
+                android:id="@+id/list_item"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/icon_product"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name_product"
+                    android:layout_width="@dimen/layout_widthTextView"
+                    android:layout_marginTop="@dimen/layout_marginTopTextViewName"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/layout_marginLeftTextViewNameProduct"
+                    android:layout_marginEnd="@dimen/layout_marginLeftTextViewNameProduct"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_product"/>
+
+                <TextView
+                    android:id="@+id/price_product"
+                    android:layout_width="@dimen/layout_widthTextViewPrice"
+                    android:layout_marginTop="@dimen/layout_marginTopTextViewName"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSIzeTextViewPrice"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="@dimen/layout_marginLeftTextViewPriceProduct"
+                    android:layout_marginEnd="@dimen/layout_marginLeftTextViewNameProduct"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"/>
+
+                <TextView
+                    android:id="@+id/address_product"
+                    android:layout_width="@dimen/layout_widthTextViewAddress"
+                    android:layout_marginTop="@dimen/layout_marginTopTextViewName"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/textSIzeTextViewAddress"
+                    android:layout_marginStart="@dimen/layout_marginLeftTextViewPriceProduct"
+                    android:layout_marginEnd="@dimen/layout_marginLeftTextViewNameProduct"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    />
+
+                <ImageView
+                    android:id="@+id/rating"
+                    android:adjustViewBounds="true"
+                    android:layout_width="125dp"
+                    android:layout_marginTop="@dimen/layout_marginTopImageRating"
+                    android:layout_marginStart="@dimen/layout_marginLeftTextViewRatingProduct"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rating_product"
+                    android:layout_marginBottom="@dimen/layout_marginBottomImageRating"
+                    android:contentDescription="@string/rating"/>
+
+                <TextView
+                    android:id="@+id/shopName"
+                    android:layout_width="@dimen/textViewCircleWidth"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:text="@string/store"
+                    android:padding="@dimen/padding"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:layout_marginBottom="@dimen/layout_marginBottomNameStore"
+                    android:layout_marginStart="@dimen/layout_marginLeftTextViewStoreProduct"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

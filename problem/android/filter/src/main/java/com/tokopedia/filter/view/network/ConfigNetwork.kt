@@ -10,6 +10,6 @@ object ConfigNetwork {
                 .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-        return retrofit.create(ProductService::class.java) //return to services to handle service
+        return retrofit.create(ProductService::class.java) //return services to handle
     }
 }

@@ -1,4 +1,55 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <!--margin top cardView-->
+    <dimen name="layout_marginTopCardView">5dp</dimen>
+    <dimen name="layout_marginBottom_CardView">4dp</dimen>
+    <dimen name="layout_margin_cardView">4dp</dimen>
+    <dimen name="layout_marginLeftCardView">5dp</dimen>
+
+    <dimen name="cardElevation">3dp</dimen>
+    <dimen name="card_cornerRadius">10dp</dimen>
+
+    <!--margin imageView-->
+    <dimen name="layout_marginLeftImageView">8dp</dimen>
+    <dimen name="layout_marginTopImageView">8dp</dimen>
+    <dimen name="layout_marginBottomImageView">8dp</dimen>
+    <dimen name="layout_width_CardView_Image">189dp</dimen>
+    <dimen name="layout_height_CardView_Image">189dp</dimen>
+    <dimen name="layout_marginRight_imageView">10dp</dimen>
+
+    <dimen name="layout_heightImageView">140dp</dimen>
+
+    <!--TextView-->
+    <dimen name="textView_Size">15dp</dimen>
+    <dimen name="layout_marginTopTextView">5dp</dimen>
+    <dimen name="layout_widthTextView">179dp</dimen>
+    <dimen name="layout_widthTextViewPrice">90dp</dimen>
+    <dimen name="layout_widthTextViewAddress">162dp</dimen>
+    <dimen name="layout_widthTextViewRating">100dp</dimen>
+    <dimen name="layout_heightTextViewRating">100dp</dimen>
+    <dimen name="layout_marginEndTextView">25dp</dimen>
+    <dimen name="layout_marginTopTextViewName">3dp</dimen>
+    <dimen name="layout_marginTopTextViewAddress">4dp</dimen>
+    <dimen name="layout_marginLeftTextViewNameProduct">8dp</dimen>
+    <dimen name="layout_marginLeftTextViewPriceProduct">17dp</dimen>
+    <dimen name="layout_marginLeftTextViewRatingProduct">10dp</dimen>
+    <dimen name="layout_marginLeftTextViewStoreProduct">14dp</dimen>
+    <dimen name="layout_marginLeftPriceTextView">8dp</dimen>
+    <dimen name="textSIzeTextViewPrice">15sp</dimen>
+    <dimen name="textSIzeTextViewAddress">14sp</dimen>
+    <dimen name="textViewCircleWidth">70dp</dimen>
+    <dimen name="textSize">12sp</dimen>
+
+    <dimen name="layout_marginTopImageRating">2dp</dimen>
+    <dimen name="layout_marginBottomImageRating">4dp</dimen>
+    <dimen name="layout_marginBottomNameStore">9dp</dimen>
+
+    <dimen name="androidRadius">10dp</dimen>
+    <dimen name="shape_width">1dp</dimen>
+
+    <!--Padding TextView-->
+    <dimen name="padding">2dp</dimen>
+
 </resources>
