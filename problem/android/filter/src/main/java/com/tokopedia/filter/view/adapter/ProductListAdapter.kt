@@ -8,6 +8,8 @@ import com.bumptech.glide.Glide
 import com.tokopedia.filter.R
 import com.tokopedia.filter.view.model.ProductsItem
 import kotlinx.android.synthetic.main.list_item_product.view.*
+import java.text.NumberFormat
+import java.util.*
 
 class ProductListAdapter(
         private val products: List<ProductsItem?>?
@@ -38,9 +40,12 @@ class ProductListAdapter(
                    .load(productsItem?.imageUrl)
                    .into(itemView.icon_product)
             itemView.name_product.text = productsItem?.name
+            //set Currency IDR
+            val localFormat = Locale("in", "ID")
+            val formatIDR = NumberFormat.getCurrencyInstance(localFormat)
             //lamda with argument it
             productsItem?.priceInt?.let {
-                itemView.price_product.setText(it)
+                itemView.price_product.text = formatIDR.format(it.toLong())
             }
             itemView.address_product.text = productsItem?.shop?.city
             itemView.shopName.text = productsItem?.shop?.name
