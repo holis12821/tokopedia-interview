@@ -12,7 +12,7 @@
     <dimen name="card_cornerRadius">10dp</dimen>
 
     <!--margin imageView-->
-    <dimen name="layout_marginLeftImageView">11dp</dimen>
+    <dimen name="layout_marginLeftImageView">13dp</dimen>
     <dimen name="layout_marginTopImageView">8dp</dimen>
     <dimen name="layout_marginBottomImageView">8dp</dimen>
     <dimen name="layout_width_CardView_Image">165dp</dimen>
@@ -32,7 +32,7 @@
     <dimen name="layout_marginEndTextView">25dp</dimen>
     <dimen name="layout_marginTopTextViewName">3dp</dimen>
     <dimen name="layout_marginTopTextViewAddress">4dp</dimen>
-    <dimen name="layout_marginLeftTextViewNameProduct">8dp</dimen>
+    <dimen name="layout_marginLeftTextViewNameProduct">10dp</dimen>
     <dimen name="layout_marginLeftTextViewPriceProduct">17dp</dimen>
     <dimen name="layout_marginLeftTextViewRatingProduct">15dp</dimen>
     <dimen name="layout_marginLeftTextViewCardViewProduct">17dp</dimen>
@@ -54,11 +54,23 @@
     <!--Padding TextView-->
     <dimen name="padding">2dp</dimen>
 
-    <dimen name="layout_width_ImageViewRating">49dp</dimen>
+    <dimen name="layout_width_ImageViewRating">62dp</dimen>
     <dimen name="textSizeNameShop">8sp</dimen>
 
-    <dimen name="textViewCardViewWidth">54dp</dimen>
+    <dimen name="textViewCardViewWidth">78dp</dimen>
     <dimen name="textViewCardViewHeight">15dp</dimen>
-    <dimen name="textViewMarginBottom">6dp</dimen>
+    <dimen name="textViewMarginBottom">10dp</dimen>
+
+    <dimen name="textViewMarginStart">24dp</dimen>
+    <dimen name="textViewMarginTop">24dp</dimen>
+    <dimen name="textSizeTextViewLocation">18sp</dimen>
+
+    <dimen name="marginStartChipGroup">24dp</dimen>
+    <dimen name="marginTopChipGroup">8dp</dimen>
+
+    <dimen name="marginStartHorizontalScrollView">16dp</dimen>
+    <dimen name="marginTopScrollView">12dp</dimen>
+    <dimen name="marginEndScrollView">16dp</dimen>
+
 
 </resources>

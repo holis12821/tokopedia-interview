@@ -11,4 +11,13 @@
     <string name="rating">rating</string>
 
     <string name="store">Tokopedia</string>
+    <string name="location">location :</string>
+    <string name="price_min_max">Price :</string>
+    <string name="jakarta">Jakarta</string>
+    <string name="apply">apply</string>
+
+    <string-array name="rangeSlider">
+        <item>17.000</item>
+        <item>5.699.000</item>
+    </string-array>
 </resources>

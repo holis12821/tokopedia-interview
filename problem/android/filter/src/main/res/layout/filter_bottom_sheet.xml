@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_filter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:context=".view.dialogfilter.FilterDialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textViewMarginStart"
+            android:layout_marginTop="@dimen/textViewMarginTop"
+            android:text="@string/location"
+            android:textSize="@dimen/textSizeTextViewLocation"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartHorizontalScrollView"
+            android:layout_marginTop="@dimen/marginTopScrollView"
+            android:layout_marginEnd="@dimen/marginEndScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location">
+
+            <LinearLayout
+                android:id="@+id/action_bar_root"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/check_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:checkedChip="@+id/location_jakarta"
+                    app:selectionRequired="true"
+                    app:singleSelection="true"
+                    app:singleLine="true">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/CustomChipStyle"
+                        android:id="@id/location_jakarta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jakarta"/>
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/CustomChipStyle"
+                        android:id="@+id/tanggerang_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jakarta"/>
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/CustomChipStyle"
+                        android:id="@+id/other_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jakarta"/>
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textViewMarginStart"
+            android:layout_marginTop="@dimen/textViewMarginTop"
+            android:text="@string/price_min_max"
+            android:textSize="@dimen/textSizeTextViewLocation"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView"/>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollViewPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartHorizontalScrollView"
+            android:layout_marginTop="@dimen/marginTopScrollView"
+            android:layout_marginEnd="@dimen/marginEndScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rangePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:values="@array/rangeSlider"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/apply"
+            android:layout_marginTop="@dimen/marginStartChipGroup"
+            app:layout_constraintTop_toBottomOf="@+id/scrollViewPrice"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

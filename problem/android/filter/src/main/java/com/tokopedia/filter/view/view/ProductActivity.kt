@@ -3,8 +3,11 @@ package com.tokopedia.filter.view.view
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.GridLayoutManager
 import com.tokopedia.filter.R
 import com.tokopedia.filter.view.adapter.ProductListAdapter
+import com.tokopedia.filter.view.dialogfilter.FilterDialog
 import com.tokopedia.filter.view.model.Data
 import com.tokopedia.filter.view.model.ProductsItem
 import com.tokopedia.filter.view.model.response.ResponseServer
@@ -28,12 +31,12 @@ class ProductActivity : AppCompatActivity() {
                         Log.d("response server : ", response.message())
                         //check response server
                         if (response.isSuccessful) {
-                            when(response.body()?.statusCode) {
-                               200 -> {
-                                   val data: Data? = response.body()?.data
-                                   showData(data?.products)
-                               }
-                           }
+                            when (response.body()?.statusCode) {
+                                200 -> {
+                                    val data: Data? = response.body()?.data
+                                    showData(data?.products)
+                                }
+                            }
                         }
                     }
 
@@ -44,9 +47,28 @@ class ProductActivity : AppCompatActivity() {
                     }
 
                 })
+        fab.setOnClickListener {
+            onFabClicked()
+        }
     }
 
     private fun showData(products: List<ProductsItem?>?) {
+        product_list.setHasFixedSize(true)
+        product_list.layoutManager = GridLayoutManager(applicationContext, 2)
+        product_list.itemAnimator = DefaultItemAnimator()
         product_list.adapter = ProductListAdapter(products)
+    }
+
+    private fun onFabClicked() {
+        val fragmentManager = supportFragmentManager
+        val filterDialogFragment = FilterDialog()
+        val fragment = fragmentManager.findFragmentByTag(filterDialogFragment::class.java.simpleName)
+        if (fragment !is FilterDialog) {
+            fragmentManager
+                    .beginTransaction()
+                    .add(R.id.frame_filter,
+                            filterDialogFragment, FilterDialog::class.java.simpleName)
+                    .commit()
+        }
     }
 }
