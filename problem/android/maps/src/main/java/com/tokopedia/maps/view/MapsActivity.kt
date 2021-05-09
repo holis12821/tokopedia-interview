@@ -1,15 +1,14 @@
-package com.tokopedia.maps
+package com.tokopedia.maps.view
 
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
+import com.tokopedia.maps.R
+import okhttp3.Request
 
 class MapsActivity : AppCompatActivity() {
 
@@ -55,11 +54,7 @@ class MapsActivity : AppCompatActivity() {
     private fun loadMap() {
         mapFragment!!.getMapAsync {
             googleMap -> this@MapsActivity.googleMap = googleMap
+            googleMap.isMyLocationEnabled = true
         }
-    }
-
-    private fun getEditText() {
-      val location =  editText?.text.toString().trim()
-        
     }
 }
