@@ -5,10 +5,13 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
 
-open class MapsActivity : AppCompatActivity() {
+class MapsActivity : AppCompatActivity() {
 
     private var mapFragment: SupportMapFragment? = null
     private var googleMap: GoogleMap? = null
@@ -45,10 +48,18 @@ open class MapsActivity : AppCompatActivity() {
             // search by the given country name, and
             // 1. pin point to the map
             // 2. set the country information to the textViews.
+
         }
     }
 
-    fun loadMap() {
-        mapFragment!!.getMapAsync { googleMap -> this@MapsActivity.googleMap = googleMap }
+    private fun loadMap() {
+        mapFragment!!.getMapAsync {
+            googleMap -> this@MapsActivity.googleMap = googleMap
+        }
+    }
+
+    private fun getEditText() {
+      val location =  editText?.text.toString().trim()
+        
     }
 }

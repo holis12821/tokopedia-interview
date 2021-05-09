@@ -4,6 +4,8 @@
     package="com.tokopedia.testproject">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +25,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="PUT_GOOGLE_MAP_API_KEY_HERE" />
+            android:value="AIzaSyDjfMtqJr6j4xRbQGY0blJiqjSkgH3O8EA" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

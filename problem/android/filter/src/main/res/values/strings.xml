@@ -13,7 +13,8 @@
     <string name="store">Tokopedia</string>
     <string name="location">location :</string>
     <string name="price_min_max">Price :</string>
-    <string name="jakarta">Jakarta</string>
+    <string name="lainya">lainnya</string>
+    <string name="jakarta">jakarta</string>
     <string name="apply">apply</string>
 
     <string-array name="rangeSlider">

@@ -5,7 +5,6 @@
         <activity android:name=".MapsActivity"
             android:label="@string/maps">
         </activity>
-
         <activity android:name=".MapsCaseActivity"
             android:label="@string/maps">
         </activity>
