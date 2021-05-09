@@ -1,16 +1,12 @@
-package com.tokopedia.filter.view.adapter.repository
+package com.tokopedia.filter.view.repository
 
-import android.annotation.SuppressLint
 import com.tokopedia.filter.view.model.response.ResponseServer
 import com.tokopedia.filter.view.network.ConfigNetwork
-import io.reactivex.Scheduler
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 class ProductRepository {
 
-
-    @SuppressLint("CheckResult")
     fun getListDataProduct(responseHandler: (ResponseServer) -> Unit,
                            errorHandler: (Throwable) -> Unit) {
         ConfigNetwork.getRetrofit()

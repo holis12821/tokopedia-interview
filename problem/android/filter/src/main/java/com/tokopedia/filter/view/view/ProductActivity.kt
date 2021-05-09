@@ -13,15 +13,15 @@ import com.tokopedia.filter.view.viewmodel.ProductListViewModel
 import kotlinx.android.synthetic.main.activity_product.*
 
 class ProductActivity : AppCompatActivity() {
-     private val  viewModel: ProductListViewModel? = null
+     private val  viewModel = ProductListViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
         /*invoke method is here*/
+        viewModel.getData()
         setUpObserve()
-        viewModel?.getData()
 
         fab.setOnClickListener {
             onFabClicked()
@@ -30,13 +30,11 @@ class ProductActivity : AppCompatActivity() {
 
     /*set observe on*/
    private fun setUpObserve() {
-        viewModel?.showDataFix?.observe(this, {
+        viewModel.onSuccessFix.observe(this, {
             showData(it?.data?.products)
         })
-        viewModel?.onSuccessFix?.observe(this, {
-            onSuccess(it)
-        })
-        viewModel?.onErrorFix?.observe(this, {
+
+        viewModel.onErrorFix.observe(this, {
             onErrorResponse(it)
         })
     }
@@ -48,18 +46,9 @@ class ProductActivity : AppCompatActivity() {
         product_list.adapter = ProductListAdapter(products)
     }
 
-    private fun onSuccess(status: Int) {
-        when(status) {
-            200 -> {
-                Toast.makeText(this@ProductActivity,
-                "Connected to Server", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-    private fun onErrorResponse(msg: String) {
+    private fun onErrorResponse(msg: Throwable) {
         Toast.makeText(this,
-        "Disconnected to server !! $msg", Toast.LENGTH_SHORT).show()
+        "Disconnected to server !! ${msg.message}", Toast.LENGTH_SHORT).show()
     }
 
     private fun onFabClicked() {
