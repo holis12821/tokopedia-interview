@@ -16,16 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <!--
+            The API key for Google Maps-based APIS is defined as string resource
+            (see the file "res/values/google_maps_api.xml)".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api_key" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDjfMtqJr6j4xRbQGY0blJiqjSkgH3O8EA" />
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,7 +1,6 @@
 package com.tokopedia.maps.repository
 
 import com.google.gson.GsonBuilder
-import com.tokopedia.maps.model.Gmaps
 import com.tokopedia.maps.model.GmapsItem
 import com.tokopedia.maps.network.ConfigNetwork
 import okhttp3.Call
@@ -11,8 +10,9 @@ import okhttp3.Response
 import java.io.IOException
 
 class MapsRepository {
-
-    fun getData(gmapsRespon: (Array<Gmaps?>?) -> Unit,
+    /**
+     * Higher Ordered Function*/
+    fun getData(gmapsRespon: (Array<GmapsItem?>?) -> Unit,
         error: (Throwable) -> Unit) {
         /**
          * define okHttpClient to handle Request*/
@@ -25,7 +25,7 @@ class MapsRepository {
                     override fun onResponse(call: Call, response: Response) {
                         val body = response.body()?.string()
                         val gson = GsonBuilder().create()
-                        val result = gson.fromJson(body, Array<Gmaps?>::class.java)
+                        val result = gson.fromJson(body , Array<GmapsItem?>::class.java)
                         gmapsRespon(result)
                     }
                 })

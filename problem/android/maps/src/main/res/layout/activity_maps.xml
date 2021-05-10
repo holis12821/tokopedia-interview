@@ -4,6 +4,7 @@
     android:animateLayoutChanges="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".view.MapsActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -33,7 +34,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        tools:context="com.example.mapwithmarker.view.MapsMarkerActivity" />
+        tools:context=".view.MapsActivity" />
 
     <TextView
         android:id="@+id/txtCountryName"
